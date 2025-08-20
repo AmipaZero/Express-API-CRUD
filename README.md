@@ -1,12 +1,17 @@
-Project ini adalah implementasi  API menggunakan Express.js dengan operasi dasar CRUD (Create, Read, Update, Delete). 
-API ini dapat digunakan untuk mengelola data produk, yang meliputi:
+# Project Express.js CRUD API untuk Produk
 
-Create: Menambahkan data produk baru.
+Proyek ini merupakan implementasi **RESTful API** menggunakan **Express.js**, dilengkapi dengan operasi CRUD (Create, Read, Update, Delete) untuk manajemen data produk.  
+API ini dirancang agar mudah digunakan oleh aplikasi frontend atau sistem lain untuk mengelola informasi produk secara efisien.
 
-Read: Melihat daftar produk atau detail produk tertentu.
+### 🔹 Fitur Utama
+- **Create**: Menambahkan produk baru ke database dengan data lengkap.  
+- **Read**: Mengambil daftar produk atau detail produk tertentu secara cepat dan terstruktur.  
+- **Update**: Memperbarui informasi produk yang sudah ada, termasuk nama, harga, stok, dan atribut lainnya.  
+- **Delete**: Menghapus produk dari database dengan aman.
 
-Update: Memperbarui informasi produk yang sudah ada.
+### 🔹 Teknologi
+- **Express.js** – Web framework ringan dan fleksibel untuk Node.js  
+- **Prisma ORM** – Untuk manajemen database yang lebih modern, aman, dan efisien  
+- **RESTful API** – Standar komunikasi backend yang mudah diintegrasikan
 
-Delete: Menghapus produk dari database.
-
-Project menggunakan Express.js dan ORM (Object-Relational Mapping) Prisma.
+Dengan desain yang modular dan clean, API ini siap digunakan untuk membangun aplikasi e-commerce, inventory system, atau proyek manajemen produk lainnya.
