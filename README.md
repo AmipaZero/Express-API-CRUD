@@ -14,4 +14,3 @@ API ini dirancang agar mudah digunakan oleh aplikasi frontend atau sistem lain u
 - **Prisma ORM** – Untuk manajemen database yang lebih modern, aman, dan efisien  
 - **RESTful API** – Standar komunikasi backend yang mudah diintegrasikan
 
-Dengan desain yang modular dan clean, API ini siap digunakan untuk membangun aplikasi e-commerce, inventory system, atau proyek manajemen produk lainnya.
