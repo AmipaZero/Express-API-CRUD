@@ -1,7 +1,6 @@
 # Project Express.js CRUD API untuk Produk
 
 Proyek ini merupakan implementasi **RESTful API** menggunakan **Express.js**, dilengkapi dengan operasi CRUD (Create, Read, Update, Delete) untuk manajemen data produk.  
-API ini dirancang agar mudah digunakan oleh aplikasi frontend atau sistem lain untuk mengelola informasi produk secara efisien.
 
 ### 🔹 Fitur Utama
 - **Create**: Menambahkan produk baru ke database dengan data lengkap.  
