@@ -1,32 +1,25 @@
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
+import * as productRepository from '../repository/productRepository.js';
 
 export const getAllProducts = async () => {
-  return await prisma.product.findMany();
+  return await productRepository.findAll();
 };
 
 export const getProductById = async (id) => {
-  return await prisma.product.findUnique({
-    where: { id: Number(id) },
-  });
+  const product = await productRepository.findById(id);
+  if (!product) throw new Error('Produk tidak ditemukan!');
+  return product;
 };
 
 export const createProduct = async (data) => {
-  return await prisma.product.create({
-    data,
-  });
+  return await productRepository.create(data);
 };
 
 export const updateProduct = async (id, data) => {
-  return await prisma.product.update({
-    where: { id: Number(id) },
-    data,
-  });
+  await getProductById(id); // pastikan produk ada dulu
+  return await productRepository.update(id, data);
 };
 
 export const deleteProduct = async (id) => {
-  return await prisma.product.delete({
-    where: { id: Number(id) },
-  });
+  await getProductById(id); // pastikan produk ada dulu
+  return await productRepository.remove(id);
 };

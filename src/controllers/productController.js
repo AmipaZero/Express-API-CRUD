@@ -1,55 +1,51 @@
 import * as productService from '../services/productService.js';
+import { successResponse, errorResponse } from '../helper/response.js';
 
- const getAll = async (req, res) => {
+export const getAll = async (req, res) => {
   try {
     const products = await productService.getAllProducts();
-    res.json(products);
+    return successResponse(res, 200, products);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    return errorResponse(res, 500, err.message);
   }
 };
 
- const getOne = async (req, res) => {
+export const getOne = async (req, res) => {
   try {
     const product = await productService.getProductById(req.params.id);
-    if (!product) return res.status(404).json({ error: 'Produk tidak ditemukan!' });
-    res.json(product);
+    return successResponse(res, 200, product);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    return errorResponse(res, 404, err.message);
   }
 };
 
- const create = async (req, res) => {
+export const create = async (req, res) => {
   try {
     const product = await productService.createProduct(req.body);
-    res.status(201).json(product);
+    return successResponse(res, 201, product);
   } catch (err) {
-    res.status(400).json({ error: err.message });
+    return errorResponse(res, 400, err.message);
   }
 };
 
- const update = async (req, res) => {
+export const update = async (req, res) => {
   try {
     const product = await productService.updateProduct(req.params.id, req.body);
-    res.json(product);
+    return successResponse(res, 200, product);
   } catch (err) {
-    res.status(400).json({ error: err.message });
+    return errorResponse(res, 400, err.message);
   }
 };
 
- const remove = async (req, res) => {
+export const remove = async (req, res) => {
   try {
     await productService.deleteProduct(req.params.id);
-    res.json({ message: 'Product deleted' });
+    return successResponse(res, 200, { message: 'produk berhasil dihapus' });
   } catch (err) {
-    res.status(400).json({ error: err.message });
+    return errorResponse(res, 400, err.message);
   }
 };
-
-export {
-getAll,
-getOne,
-create,
-update,
-remove
-};
+// git pull origin main
+// // git add .
+//  git commit -m "Perbaikan code"
+// git push origin main
