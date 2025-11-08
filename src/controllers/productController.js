@@ -45,7 +45,3 @@ export const remove = async (req, res) => {
     return errorResponse(res, 400, err.message);
   }
 };
-// git pull origin main
-// // git add .
-//  git commit -m "Perbaikan code"
-// git push origin main
