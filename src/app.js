@@ -1,4 +1,4 @@
-import productRoutes from './routes/productRoutes.js';
+import productRoutes from './routes/productRoute.js';
 import express from 'express';
 import dotenv from 'dotenv';
 import { PrismaClient } from '@prisma/client';
