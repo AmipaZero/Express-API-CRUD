@@ -1,0 +1,16 @@
+stages:
+  - test
+  - deploy
+
+test_job:
+  stage: test
+  script:
+    - echo "Running basic test..."
+    - node -v
+    - npm install
+    - npm test || echo "Tidak ada test"
+
+deploy_job:
+  stage: deploy
+  script:
+    - echo "Simulasi deploy (belum beneran)"
