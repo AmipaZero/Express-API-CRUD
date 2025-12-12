@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"No tests yet\"",
     "lint": "eslint .",
-    "build": "echo Build step completed"
+    "build": "echo Build step completed",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
   },
   "author": "",
   "license": "ISC",
