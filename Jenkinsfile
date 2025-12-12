@@ -81,11 +81,12 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                bat 'docker stop express-api || echo "no running container"'
-                bat 'docker rm express-api || echo "no old container"'
-                bat 'docker run -d -p 3000:3000 --name express-api express-api:latest'
+                bat '''
+                    docker stop express-api || true
+                    docker rm express-api || true
+                    docker run -d -p 3000:3000 --name express-api express-api:latest
+                '''
             }
         }
-        
     }
 }
