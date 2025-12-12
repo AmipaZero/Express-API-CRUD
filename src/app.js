@@ -15,7 +15,6 @@ app.get("/api", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  // console.log("Express API running on port: http://" + PORT);
   console.log(`Server running at http://localhost:${PORT}/`);
 
 });
